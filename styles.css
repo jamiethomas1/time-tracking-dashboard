@@ -47,6 +47,10 @@ html {
 body {
   min-height: 100%;
   background-color: var(--very-dark-blue);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-block: 5rem;
 }
 
 p {
@@ -71,11 +75,20 @@ h6 {
 }
 
 .wrapper {
-  padding-block: 5rem;
+  /* padding-block: 5rem; */
   padding-inline: 1.5rem;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   gap: var(--spacing-300);
+}
+
+@media (min-width: 1440px) {
+  .wrapper {
+    padding-inline: unset;
+    margin: auto;
+    max-width: 70%;
+    grid-template-columns: repeat(4, minmax(16rem, 1fr));
+  }
 }
 
 /* Profile Component */
@@ -93,6 +106,19 @@ h6 {
 
 .profile, .profile__top {
   border-radius: var(--card-corner-radius);
+}
+
+@media (min-width: 768px) {
+  .profile {
+    grid-column: span 2;
+  }
+}
+
+@media (min-width: 1440px) {
+  .profile {
+    grid-row: span 2;
+    grid-column: unset;
+  }
 }
 
 .profile__img {
