@@ -20,7 +20,7 @@
 
   /* Typography */
   --text-m: 1rem;
-  --text-l: 1.125rem;
+  --heading-s: 1.125rem;
   --heading-m: clamp(1.5rem, 1.1479rem + 1.5023vw, 2.5rem);
   --heading-l: clamp(2rem, 1.4718rem + 2.2535vw, 3.5rem);
 
